@@ -29,6 +29,9 @@ namespace Regis {
         private global::Xamarin.Forms.Button btnTien;
         
         [System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
+        private global::Xamarin.Forms.Label txtload;
+        
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
         private global::Xamarin.Forms.ListView lstTKB;
         
         [System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
@@ -38,6 +41,7 @@ namespace Regis {
             txtThu = this.FindByName<global::Xamarin.Forms.Label>("txtThu");
             txtNgay = this.FindByName<global::Xamarin.Forms.Label>("txtNgay");
             btnTien = this.FindByName<global::Xamarin.Forms.Button>("btnTien");
+            txtload = this.FindByName<global::Xamarin.Forms.Label>("txtload");
             lstTKB = this.FindByName<global::Xamarin.Forms.ListView>("lstTKB");
         }
     }

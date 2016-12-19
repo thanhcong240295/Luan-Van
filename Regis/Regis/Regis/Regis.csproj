@@ -43,6 +43,10 @@
     <Compile Include="Home.xaml.cs">
       <DependentUpon>Home.xaml</DependentUpon>
     </Compile>
+    <Compile Include="LichThi.xaml.cs">
+      <DependentUpon>LichThi.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="LichThi_DTO.cs" />
     <Compile Include="Login.xaml.cs">
       <DependentUpon>Login.xaml</DependentUpon>
     </Compile>
@@ -122,6 +126,12 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="ChuongTrinhDaoTao.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="LichThi.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>

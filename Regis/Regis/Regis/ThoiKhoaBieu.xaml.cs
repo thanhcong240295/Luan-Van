@@ -267,6 +267,7 @@ namespace Regis
         
         async void Test()
         {
+            txtload.Text = "Loading ...";
             List<String> MMH = new List<String>();
             List<String> TMH = new List<String>();
             List<String> PHONG = new List<String>();
@@ -429,13 +430,14 @@ namespace Regis
                 else if(MMH.Count == 0)
                 {
                     List<ThoiKhoaBieu_DTO> h = new List<ThoiKhoaBieu_DTO>();
-                    s.Add(new ThoiKhoaBieu_DTO()
+                    h.Add(new ThoiKhoaBieu_DTO()
                     {
                         MaTen = "Không Có Lịch Học"
                     });
                     lstTKB.ItemsSource = h;
                 }
             }
+            txtload.Text = null;
         }
 
         static async Task<string> DownloadPage(string url)

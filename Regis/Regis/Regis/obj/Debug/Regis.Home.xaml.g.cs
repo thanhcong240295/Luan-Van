@@ -29,12 +29,16 @@ namespace Regis {
         private global::Xamarin.Forms.Button btnTKB;
         
         [System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
+        private global::Xamarin.Forms.Button btnLichThi;
+        
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
         private void InitializeComponent() {
             this.LoadFromXaml(typeof(Home));
             grid = this.FindByName<global::Xamarin.Forms.Grid>("grid");
             btnnews = this.FindByName<global::Xamarin.Forms.Button>("btnnews");
             btnCTDT = this.FindByName<global::Xamarin.Forms.Button>("btnCTDT");
             btnTKB = this.FindByName<global::Xamarin.Forms.Button>("btnTKB");
+            btnLichThi = this.FindByName<global::Xamarin.Forms.Button>("btnLichThi");
         }
     }
 }

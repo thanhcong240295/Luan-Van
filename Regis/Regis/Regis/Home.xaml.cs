@@ -28,6 +28,10 @@ namespace Regis
             {
                 Navigation.PushAsync(new ChuongTrinhDaoTao());
             };
+            btnLichThi.Clicked += (sender, e) =>
+            {
+                Navigation.PushAsync(new LichThi());
+            };
         }
     }
 }

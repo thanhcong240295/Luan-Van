@@ -34,7 +34,7 @@
             <Label Text="Lịch Học" XAlign="Center" FontAttributes="Bold" TextColor="#019A01"></Label>
       </StackLayout>
       <StackLayout VerticalOptions="Center" HorizontalOptions="Center" Grid.Column="1" Grid.Row="1">
-            <Button Image ="tkb.png" BackgroundColor="White"></Button>
+            <Button Image ="tkb.png" BackgroundColor="White" x:Name="btnLichThi"></Button>
             <Label Text="Lịch Thi" XAlign="Center" FontAttributes="Bold" TextColor="#019A01"></Label>
       </StackLayout>
       <StackLayout VerticalOptions="Center" HorizontalOptions="Center" Grid.Column="2" Grid.Row="1">
