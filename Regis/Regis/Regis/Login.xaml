@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Regis.Login">
+    <ScrollView>
+        <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
+            <StackLayout Padding="15">
+                <Image Source="agulogo.jpg" HeightRequest="150"/>
+            </StackLayout>
+            <StackLayout WidthRequest="250">
+                <Label Text="Nhập Mã Sinh Viên:" TextColor="#019A01" />
+                <Entry x:Name="masinhvien" Placeholder="DPM135369" PlaceholderColor="#767676"></Entry>
+                <Label Text="Nhập Password:" TextColor="#019A01"/>
+                <Entry x:Name="password" Placeholder="DPM135369" IsPassword="True" PlaceholderColor="#767676"></Entry>
+                <Button x:Name="dangnhap" Text="Đăng Nhập" TextColor="#B6192B"></Button>
+            </StackLayout>
+            <Label x:Name="txtErro"></Label>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

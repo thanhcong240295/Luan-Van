@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Regis.ChuongTrinhDaoTao">
+    <StackLayout>
+        <ListView x:Name="lstCTDT" HasUnevenRows="True">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout>
+                            <Label Text="{Binding MaMonHoc}"></Label>
+                            <Label Text="{Binding TenMonHoc}"></Label>
+                            <Label Text="{Binding SoTinChi}"></Label>
+                            <Label Text="{Binding NamHoc}"></Label>
+                            <Label Text="{Binding DaHoc}"></Label>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+</ContentPage>

@@ -1,0 +1,181 @@
+{
+    "MMH": "SHCN",
+    "TenMH": "Sinh ho\u1ea1t ch\u1ee7 nhi\u1ec7m",
+    "NMH": 26,
+    "STC": 0,
+    "NTH": "\r\n",
+    "Phong": "",
+    "batDau": "11:30",
+    "ketThuc": "11:30",
+    "dates": [
+        "19-12-2016",
+        "19-12-2016",
+        "19-12-2016"
+    ]
+},
+{
+    "MMH": "TIE903",
+    "TenMH": "Th\u1ef1c t\u1eadp cu\u1ed1i kh\u00f3a - TH",
+    "NMH": 1,
+    "STC": 5,
+    "NTH": "\r\n",
+    "Phong": "",
+    "batDau": "11:30",
+    "ketThuc": "11:30"
+},
+{
+    "MMH": "CON914",
+    "TenMH": "L\u1eadp tr\u00ecnh truy\u1ec1n th\u00f4ng",
+    "NMH": 1,
+    "STC": 2,
+    "NTH": 1,
+    "Phong": "NMT07",
+    "batDau": "7:00",
+    "ketThuc": "11:30",
+    "dates": [
+        "26-12-2016",
+        "02-01-2017",
+        "09-01-2017",
+        "16-01-2017"
+    ]
+},
+{
+    "MMH": "CON914",
+    "TenMH": "L\u1eadp tr\u00ecnh truy\u1ec1n th\u00f4ng",
+    "NMH": 1,
+    "STC": 2,
+    "NTH": "\r\n",
+    "Phong": "ND402",
+    "batDau": "13:00",
+    "ketThuc": "16:35",
+    "dates": [
+        "19-12-2016",
+        "26-12-2016",
+        "02-01-2017",
+        "09-01-2017",
+        "16-01-2017"
+    ]
+},
+{
+    "MMH": "IMS915",
+    "TenMH": "H\u1ec7 qu\u1ea3n tr\u1ecb CSDL DB2",
+    "NMH": 1,
+    "STC": 3,
+    "NTH": 1,
+    "Phong": "NMT09",
+    "batDau": "7:00",
+    "ketThuc": "11:30",
+    "dates": [
+        "27-12-2016",
+        "03-01-2017",
+        "10-01-2017",
+        "17-01-2017",
+        "04-04-2017",
+        "11-04-2017"
+    ]
+},
+{
+    "MMH": "CON911",
+    "TenMH": "C\u00f4ng ngh\u1ec7 XML v\u00e0 \u1ee9ng d\u1ee5ng",
+    "NMH": 2,
+    "STC": 3,
+    "NTH": "\r\n",
+    "Phong": "NMT03",
+    "batDau": "13:00",
+    "ketThuc": "17:30",
+    "dates": [
+        "27-12-2016",
+        "03-01-2017",
+        "10-01-2017",
+        "17-01-2017",
+        "04-04-2017",
+        "11-04-2017"
+    ]
+},
+{
+    "MMH": "SEE504",
+    "TenMH": "Ph\u00e1t tri\u1ec3n ph\u1ea7n m\u1ec1m m\u00e3 ngu\u1ed3n m\u1edf",
+    "NMH": 1,
+    "STC": 2,
+    "NTH": "\r\n",
+    "Phong": "NC209",
+    "batDau": "7:50",
+    "ketThuc": "11:30",
+    "dates": [
+        "21-12-2016",
+        "28-12-2016",
+        "04-01-2017",
+        "11-01-2017",
+        "18-01-2017"
+    ]
+},
+{
+    "MMH": "SEE504",
+    "TenMH": "Ph\u00e1t tri\u1ec3n ph\u1ea7n m\u1ec1m m\u00e3 ngu\u1ed3n m\u1edf",
+    "NMH": 1,
+    "STC": 2,
+    "NTH": 1,
+    "Phong": "NMT06",
+    "batDau": "13:00",
+    "ketThuc": "17:30",
+    "dates": [
+        "28-12-2016",
+        "04-01-2017",
+        "11-01-2017",
+        "18-01-2017"
+    ]
+},
+{
+    "MMH": "IMS915",
+    "TenMH": "H\u1ec7 qu\u1ea3n tr\u1ecb CSDL DB2",
+    "NMH": 1,
+    "STC": 3,
+    "NTH": "\r\n",
+    "Phong": "NB301",
+    "batDau": "7:00",
+    "ketThuc": "8:50",
+    "dates": [
+        "29-12-2016",
+        "05-01-2017",
+        "12-01-2017",
+        "19-01-2017",
+        "06-04-2017",
+        "13-04-2017"
+    ]
+},
+{
+    "MMH": "CON911",
+    "TenMH": "C\u00f4ng ngh\u1ec7 XML v\u00e0 \u1ee9ng d\u1ee5ng",
+    "NMH": 2,
+    "STC": 3,
+    "NTH": "\r\n",
+    "Phong": "NC209_",
+    "batDau": "7:00",
+    "ketThuc": "11:30",
+    "dates": [
+        "23-12-2016",
+        "30-12-2016",
+        "06-01-2017",
+        "13-01-2017",
+        "20-01-2017",
+        "07-04-2017"
+    ]
+},
+{
+    "MMH": "IMS915",
+    "TenMH": "H\u1ec7 qu\u1ea3n tr\u1ecb CSDL DB2",
+    "NMH": 1,
+    "STC": 3,
+    "NTH": "\r\n",
+    "Phong": "A.L02",
+    "batDau": "8:50",
+    "ketThuc": "11:30",
+    "dates": [
+        "24-12-2016",
+        "31-12-2016",
+        "07-01-2017",
+        "14-01-2017",
+        "21-01-2017",
+        "08-04-2017"
+    ]
+}

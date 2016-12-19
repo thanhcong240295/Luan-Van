@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Regis.ThoiKhoaBieu">
+    <StackLayout HorizontalOptions="Center">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="70"/>
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Button x:Name="btnLui" BackgroundColor="White" Image="lui.png" VerticalOptions="Center" HorizontalOptions="Center" Grid.Column="0" Grid.Row="0"></Button>
+            <StackLayout VerticalOptions="Center" HorizontalOptions="Center" Grid.Column="1" Grid.Row="0">
+                <Label x:Name="txtThu" Text="Thu" HorizontalOptions="Center" FontSize="20" TextColor="#019A01" FontAttributes="Bold" VerticalOptions="Center"  Grid.Column="1" Grid.Row="0"></Label>
+                <Label x:Name="txtNgay" Text="1/1/2017" HorizontalOptions="Center" VerticalOptions="Center" Grid.Column="1" Grid.Row="0"></Label>
+            </StackLayout>
+            <Button x:Name="btnTien" BackgroundColor="White" Image="tien.png" VerticalOptions="Center" HorizontalOptions="Center" Grid.Column="2" Grid.Row="0"></Button>
+        </Grid>
+        <ListView x:Name="lstTKB" HasUnevenRows="True">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Padding="10" HorizontalOptions="Center">
+                            <Label Text="{Binding ThoiGian}" HorizontalOptions="Center" FontSize="20" FontAttributes="Bold" TextColor="Red"/>
+                            <Label Text="{Binding MaTen}" HorizontalOptions="Center" FontSize="15" FontAttributes="Bold" TextColor="#019A01"/>
+                            <Label Text="{Binding PhongH}" HorizontalOptions="Center" FontAttributes="Bold"/>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+</ContentPage>

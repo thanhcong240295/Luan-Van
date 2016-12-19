@@ -1,0 +1,2 @@
+D:\TKB_AGU\Regis\Regis\Regis.WinPhone\Regis.WinPhone.csproj;neutral
+D:\TKB_AGU\Regis\Regis\Regis\Regis.csproj;neutral
