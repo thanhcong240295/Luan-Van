@@ -135,6 +135,15 @@ namespace Regis
                     });
                     lstTKB.ItemsSource = s;
                 }
+                
+            }
+            else
+            {
+                s.Add(new LichThi_DTO()
+                {
+                    MaTen = "Chưa Có Lịch Thi",
+                });
+                lstTKB.ItemsSource = s;
             }
         }
         static async Task<string> DownloadPage(string url)

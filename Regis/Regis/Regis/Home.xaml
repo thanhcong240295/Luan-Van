@@ -43,7 +43,7 @@
       </StackLayout>
 
       <StackLayout VerticalOptions="Center" HorizontalOptions="Center" Grid.Column="0" Grid.Row="2">
-            <Button Image ="money.png" BackgroundColor="White"></Button>
+            <Button Image ="money.png" BackgroundColor="White" x:Name="btnHP"></Button>
             <Label Text="Học Phí" XAlign="Center" FontAttributes="Bold" TextColor="#019A01"></Label>
       </StackLayout>
       <StackLayout VerticalOptions="Center" HorizontalOptions="Center" Grid.Column="1" Grid.Row="2">

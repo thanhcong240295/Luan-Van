@@ -32,6 +32,10 @@ namespace Regis
             {
                 Navigation.PushAsync(new LichThi());
             };
+            btnHP.Clicked += (sender, e) =>
+            {
+                Navigation.PushAsync(new HocPhi());
+            };
         }
     }
 }

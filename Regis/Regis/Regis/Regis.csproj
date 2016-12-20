@@ -40,6 +40,10 @@
       <DependentUpon>ChuongTrinhDaoTao.xaml</DependentUpon>
     </Compile>
     <Compile Include="ChuongTrinhDaoTao_DTO.cs" />
+    <Compile Include="HocPhi.xaml.cs">
+      <DependentUpon>HocPhi.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="HocPhi_DTO.cs" />
     <Compile Include="Home.xaml.cs">
       <DependentUpon>Home.xaml</DependentUpon>
     </Compile>
@@ -50,6 +54,7 @@
     <Compile Include="Login.xaml.cs">
       <DependentUpon>Login.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Login_DTO.cs" />
     <Compile Include="News.xaml.cs">
       <DependentUpon>News.xaml</DependentUpon>
     </Compile>
@@ -132,6 +137,12 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="LichThi.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="HocPhi.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>

@@ -30,5 +30,6 @@ D:\TKB_AGU\Regis\Regis\Regis\bin\Debug\HtmlAgilityPack.xml
 D:\TKB_AGU\Regis\Regis\Regis\bin\Debug\LitJson.dll
 D:\TKB_AGU\Regis\Regis\Regis\obj\Debug\Regis.ChuongTrinhDaoTao.xaml.g.cs
 D:\TKB_AGU\Regis\Regis\Regis\obj\Debug\Regis.LichThi.xaml.g.cs
+D:\TKB_AGU\Regis\Regis\Regis\obj\Debug\Regis.HocPhi.xaml.g.cs
 D:\TKB_AGU\Regis\Regis\Regis\obj\Debug\Regis.dll.mdb
 D:\TKB_AGU\Regis\Regis\Regis\bin\Debug\Regis.dll.mdb

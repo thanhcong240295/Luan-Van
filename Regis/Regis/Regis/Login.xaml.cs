@@ -15,25 +15,22 @@ namespace Regis
         public Login()
         {
             InitializeComponent();
-            //Test();
-            dangnhap.Clicked += (sender, e) =>
-            {
-                    Navigation.PushAsync(new Home());
-            };
-
+            Login_DTO lg = new Login_DTO();
+            Test();
         }
         async void Test()
         {
             var r = await DownloadPage("http://192.168.1.5:8080//dangnhap.php");
+            string s = r.Replace("\t", string.Empty);
             dangnhap.Clicked += (sender, e) =>
             {
-                if (r != null)
+                if (s != "")
                 {
                     Navigation.PushAsync(new Home());
                 }
                 else
                 {
-                    txtErro.Text = "Đăng Nhập Thất Bại";
+                    DisplayAlert("Thông Báo", "MSSV hoặc Mật Khẩu Không Đúng", "OK");
                 }
             };
         }
