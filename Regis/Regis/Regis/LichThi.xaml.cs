@@ -12,12 +12,17 @@ namespace Regis
 {
     public partial class LichThi : ContentPage
     {
+        string u = null;
+        string p = null;
+
         int Day = DateTime.Now.Day;
         int Month = DateTime.Now.Month;
         int Year = DateTime.Now.Year;
         public LichThi()
         {
             InitializeComponent();
+            u = (Application.Current as App).User;
+            p = (Application.Current as App).Pass;
             Test();
         }
         async void Test()
@@ -34,7 +39,7 @@ namespace Regis
             List<String> TG = new List<String>();
             List<String> P = new List<String>();
 
-            var r = await DownloadPage("http://192.168.1.5:8080//lichthi.php");
+            var r = await DownloadPage("http://192.168.1.2:8080//lichthi.php");
             var t = JsonConvert.DeserializeObject<List<LichThi_DTO>>(r);
             foreach (LichThi_DTO lt in t)
             {
@@ -146,11 +151,19 @@ namespace Regis
                 lstTKB.ItemsSource = s;
             }
         }
-        static async Task<string> DownloadPage(string url)
+        async Task<string> DownloadPage(string url)
         {
+            var comment = u;
+            var questionId = p;
+
+            var formContent = new FormUrlEncodedContent(new[]
+            {
+                new KeyValuePair<string, string>("_user", comment),
+                new KeyValuePair<string, string>("_pass", questionId)
+            });
             using (var client = new HttpClient())
             {
-                using (var r = await client.GetAsync(new Uri(url)))
+                using (var r = await client.PostAsync(new Uri(url), formContent))
                 {
                     string result = await r.Content.ReadAsStringAsync();
                     return result;

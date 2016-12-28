@@ -27,9 +27,9 @@
                 <DataTemplate>
                     <ViewCell>
                         <StackLayout Padding="10" HorizontalOptions="Center">
-                            <Label Text="{Binding ThoiGian}" HorizontalOptions="Center" FontSize="20" FontAttributes="Bold" TextColor="Red"/>
-                            <Label Text="{Binding MaTen}" HorizontalOptions="Center" FontSize="15" FontAttributes="Bold" TextColor="#019A01"/>
-                            <Label Text="{Binding PhongH}" HorizontalOptions="Center" FontAttributes="Bold"/>
+                            <Label Text="{Binding ThoiGian}" XAlign="Center" HorizontalOptions="Center" FontSize="20" FontAttributes="Bold" TextColor="Red"/>
+                            <Label Text="{Binding MaTen}" XAlign="Center" HorizontalOptions="Center" FontSize="15" FontAttributes="Bold" TextColor="#019A01"/>
+                            <Label Text="{Binding PhongH}" XAlign="Center" HorizontalOptions="Center" FontAttributes="Bold"/>
                         </StackLayout>
                     </ViewCell>
                 </DataTemplate>

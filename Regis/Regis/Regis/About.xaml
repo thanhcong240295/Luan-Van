@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Regis.About">
+    <StackLayout Margin="10">
+        <StackLayout HorizontalOptions="Center">
+            <Image Source="agulogo.png" WidthRequest="100"></Image>
+            <Label Text="Phiên Bản: AGU.1.0.1" XAlign="Center"></Label>
+        </StackLayout>
+        <ListView x:Name="lstTKB" HasUnevenRows="True">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Padding="10">
+                            <Label Margin="8" Text="{Binding ThongTin}" FontSize="15" FontAttributes="Bold" TextColor="Black"/>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <StackLayout HorizontalOptions="Center">
+            <Label Text="Điều Khoản Sử Dụng" TextColor="Blue" XAlign="Center"></Label>
+            <Label Text="@2016 - Sản Phẩm Của Sinh Viên AGU" XAlign="Center"></Label>
+            <Label Text="Phát Triển Bởi Panda" XAlign="Center"></Label>
+        </StackLayout>
+    </StackLayout>
+    
+    
+</ContentPage>

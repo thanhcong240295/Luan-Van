@@ -9,6 +9,9 @@ namespace Regis
 {
     public class App : Application
     {
+        public string Pass { get; internal set; }
+        public string User { get; internal set; }
+
         public App()
         {
             // The root page of your application

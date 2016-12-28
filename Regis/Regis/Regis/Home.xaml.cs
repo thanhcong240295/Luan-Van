@@ -36,6 +36,14 @@ namespace Regis
             {
                 Navigation.PushAsync(new HocPhi());
             };
+            btnDiem.Clicked += (sender, e) =>
+            {
+                Navigation.PushAsync(new XemDiem());
+            };
+            btnThongTin.Clicked += (sender, e) =>
+            {
+                Navigation.PushAsync(new About());
+            };
         }
     }
 }

@@ -26,26 +26,43 @@ namespace Regis
         int Day = DateTime.Now.Day;
         int Month = DateTime.Now.Month;
         int Year = DateTime.Now.Year;
-
-        
+        string u = null;
         public ThoiKhoaBieu()
         {
+            u = (Application.Current as App).User;
+            string ngay, thang;
             InitializeComponent();
             txtThu.Text = Thu.ToString();
-            txtNgay.Text = Day.ToString() + "-" + Month.ToString() + "-" + Year.ToString();
+            if (Day < 10)
+            {
+                ngay = "0" + Day.ToString();
+            }
+            else
+            {
+                ngay = Day.ToString();
+            }
+            if (Month < 10)
+            {
+                thang = "0" + Month.ToString();
+            }
+            else
+            {
+                thang = Month.ToString();
+            }
+            txtNgay.Text = ngay + "-" + thang + "-" + Year.ToString();
             ThoiKhoaBieu_DTO tkb = new ThoiKhoaBieu_DTO();
             Test();
 
             btnTien.Clicked += (sender, e) =>
             {
                 Thu += 1;
-                if(Thu > DayOfWeek.Saturday)
+                if (Thu > DayOfWeek.Saturday)
                 {
                     Thu = 0;
                 }
-                if(Month == 1 || Month == 3 || Month == 5 || Month == 7 || Month == 8 || Month == 10 || Month == 12)
+                if (Month == 1 || Month == 3 || Month == 5 || Month == 7 || Month == 8 || Month == 10 || Month == 12)
                 {
-                    if(Day < 31)
+                    if (Day < 31)
                     {
                         Day += 1;
                     }
@@ -60,7 +77,7 @@ namespace Regis
                         }
                     }
                 }
-                else if(Month == 4 || Month == 6 || Month == 9 || Month == 11)
+                else if (Month == 4 || Month == 6 || Month == 9 || Month == 11)
                 {
                     if (Day < 30)
                     {
@@ -115,7 +132,23 @@ namespace Regis
                     }
                 }
                 txtThu.Text = Thu.ToString();
-                txtNgay.Text = Day.ToString() + "-" + Month.ToString() + "-" + Year.ToString();
+                if (Day < 10)
+                {
+                    ngay = "0" + Day.ToString();
+                }
+                else
+                {
+                    ngay = Day.ToString();
+                }
+                if (Month < 10)
+                {
+                    thang = "0" + Month.ToString();
+                }
+                else
+                {
+                    thang = Month.ToString();
+                }
+                txtNgay.Text = ngay + "-" + thang + "-" + Year.ToString();
                 Test();
             };
 
@@ -259,12 +292,27 @@ namespace Regis
                     }
                 }
                 txtThu.Text = Thu.ToString();
-                txtNgay.Text = Day.ToString() + "-" + Month.ToString() + "-" + Year.ToString();
+                if (Day < 10)
+                {
+                    ngay = "0" + Day.ToString();
+                }
+                else
+                {
+                    ngay = Day.ToString();
+                }
+                if (Month < 10)
+                {
+                    thang = "0" + Month.ToString();
+                }
+                else
+                {
+                    thang = Month.ToString();
+                }
+                txtNgay.Text = ngay + "-" + thang + "-" + Year.ToString();
                 Test();
             };
 
         }
-        
         async void Test()
         {
             txtload.Text = "Loading ...";
@@ -277,13 +325,13 @@ namespace Regis
             List<String> TG = new List<String>();
             List<String> P = new List<String>();
 
-            var r = await DownloadPage("http://192.168.1.5:8080//action.php");
+            var r = await DownloadPage("http://192.168.1.2:8080//action.php");
             var t = JsonConvert.DeserializeObject<List<ThoiKhoaBieu_DTO>>(r);
-            foreach(ThoiKhoaBieu_DTO tkb in t)
+            foreach (ThoiKhoaBieu_DTO tkb in t)
             {
-                foreach(var n in tkb.NgayHoc)
+                foreach (var n in tkb.NgayHoc)
                 {
-                    if(n == txtNgay.Text)
+                    if (n == txtNgay.Text)
                     {
                         MMH.Add(tkb.MaMonHoc);
                         TMH.Add(tkb.TenMonHoc);
@@ -415,9 +463,9 @@ namespace Regis
                         txtThoiGian[i].Text = TG[i].ToString();
                         txtPhong[i].Text = P[i].ToString();
 
-                        
-                    
-                        
+
+
+
                         s.Add(new ThoiKhoaBieu_DTO()
                         {
                             ThoiGian = txtThoiGian[i].Text,
@@ -427,7 +475,7 @@ namespace Regis
                         lstTKB.ItemsSource = s;
                     }
                 }
-                else if(MMH.Count == 0)
+                else if (MMH.Count == 0)
                 {
                     List<ThoiKhoaBieu_DTO> h = new List<ThoiKhoaBieu_DTO>();
                     h.Add(new ThoiKhoaBieu_DTO()
@@ -440,11 +488,16 @@ namespace Regis
             txtload.Text = null;
         }
 
-        static async Task<string> DownloadPage(string url)
+        async Task<string> DownloadPage(string url)
         {
+            var comment = u;
+            var formContent = new FormUrlEncodedContent(new[]
+            {
+                new KeyValuePair<string, string>("_user", comment)
+            });
             using (var client = new HttpClient())
             {
-                using (var r = await client.GetAsync(new Uri(url)))
+                using (var r = await client.PostAsync(new Uri(url), formContent))
                 {
                     string result = await r.Content.ReadAsStringAsync();
                     return result;
@@ -452,4 +505,5 @@ namespace Regis
             }
         }
     }
+
 }

@@ -12,33 +12,41 @@ namespace Regis
 {
     public partial class Login : ContentPage
     {
+        public string User { get; set; }
+        public string Pass { get; set; }
         public Login()
         {
             InitializeComponent();
-            Login_DTO lg = new Login_DTO();
-            Test();
+            dangnhap.Clicked += (sender, e) =>
+            {
+                (Application.Current as App).User = masinhvien.Text;
+                (Application.Current as App).Pass = password.Text;
+                Test();
+            };
         }
         async void Test()
         {
-            var r = await DownloadPage("http://192.168.1.5:8080//dangnhap.php");
+            var r = await DownloadPage("http://192.168.1.2:8080//dangnhap.php");
             string s = r.Replace("\t", string.Empty);
-            dangnhap.Clicked += (sender, e) =>
+            if (s != "")
             {
-                if (s != "")
-                {
-                    Navigation.PushAsync(new Home());
-                }
-                else
-                {
-                    DisplayAlert("Thông Báo", "MSSV hoặc Mật Khẩu Không Đúng", "OK");
-                }
-            };
+                Navigation.PushAsync(new Home());
+            }
+            else
+            {
+                DisplayAlert("Thông Báo", "MSSV hoặc Mật Khẩu Không Đúng", "OK");
+            }
         }
-        static async Task<string> DownloadPage(string url)
+        async Task<string> DownloadPage(string url)
         {
+            var formContent = new FormUrlEncodedContent(new[]
+            {
+                new KeyValuePair<string, string>("_user", masinhvien.Text),
+                new KeyValuePair<string, string>("_pass", password.Text)
+            });
             using (var client = new HttpClient())
             {
-                using (var r = await client.GetAsync(new Uri(url)))
+                using (var r = await client.PostAsync(new Uri(url), formContent))
                 {
                     string result = await r.Content.ReadAsStringAsync();
                     return result;

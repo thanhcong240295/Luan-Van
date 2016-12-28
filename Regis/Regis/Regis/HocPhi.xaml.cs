@@ -13,14 +13,18 @@ namespace Regis
 {
     public partial class HocPhi : ContentPage
     {
+        string u = null;
+        string p = null;
         public HocPhi()
         {
             InitializeComponent();
+            u = (Application.Current as App).User;
+            p = (Application.Current as App).Pass;
             Test();
         }
         async void Test()
         {
-            var r = await DownloadPage("http://192.168.1.5:8080//hocphi.php");
+            var r = await DownloadPage("http://192.168.1.2:8080//hocphi.php");
             var t = JsonConvert.DeserializeObject<List<HocPhi_DTO>>(r);
 
             List<String> MMH = new List<String>();
@@ -67,7 +71,7 @@ namespace Regis
                     lbST[i].Text = SOTIEN[i].ToString();
                     txtMT[i].Text = MT[i].ToString();
                     txtST[i].Text = ST[i].ToString();
-
+                    /*
                     string f = "Cái gì thế này";
                     string[] slipt = f.Split(new char[] {' '});
                     for(int q = 0; q < slipt.Length-1; q++)
@@ -79,7 +83,7 @@ namespace Regis
                     //double v = double.Parse(e.ToString());
                     c = c + g;
                     //vl = vl + v;
-
+                    */
                     s.Add(new HocPhi_DTO()
                     {
                         MaTen = MT[i].ToString(),
@@ -87,8 +91,8 @@ namespace Regis
                     });
                     lstTKB.ItemsSource = s;
                 }
-                txtTongChi.Text = "Tổng Số Tín Chỉ: " + c.ToString();
-                txtTongTien.Text = "Tổng Số Tiền HP: " + k;
+                //txtTongChi.Text = "Tổng Số Tín Chỉ: " + c.ToString();
+                //txtTongTien.Text = "Tổng Số Tiền HP: " + k;
             }
             else
             {
@@ -99,11 +103,19 @@ namespace Regis
                 lstTKB.ItemsSource = s;
             }
         }
-        static async Task<string> DownloadPage(string url)
+        async Task<string> DownloadPage(string url)
         {
+            var comment = u;
+            var questionId = p;
+
+            var formContent = new FormUrlEncodedContent(new[]
+            {
+                new KeyValuePair<string, string>("_user", comment),
+                new KeyValuePair<string, string>("_pass", questionId)
+            });
             using (var client = new HttpClient())
             {
-                using (var r = await client.GetAsync(new Uri(url)))
+                using (var r = await client.PostAsync(new Uri(url), formContent))
                 {
                     string result = await r.Content.ReadAsStringAsync();
                     return result;

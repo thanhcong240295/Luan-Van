@@ -6,9 +6,20 @@ using System.Threading.Tasks;
 
 namespace Regis
 {
-    class Login_DTO
+    public class Login_DTO
     {
-        public string User { get; set; }
-        public string Pass { get; set; }
+        private string user;
+        public string User
+        {
+            get { return user; }
+            set { user = value; }
+        }
+        private string pass;
+        public string Pass
+        {
+            get { return pass; }
+            set { pass = value; }
+        }
+        
     }
 }

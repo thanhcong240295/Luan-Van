@@ -32,7 +32,13 @@ namespace Regis {
         private global::Xamarin.Forms.Button btnLichThi;
         
         [System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
+        private global::Xamarin.Forms.Button btnDiem;
+        
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
         private global::Xamarin.Forms.Button btnHP;
+        
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
+        private global::Xamarin.Forms.Button btnThongTin;
         
         [System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
         private void InitializeComponent() {
@@ -42,7 +48,9 @@ namespace Regis {
             btnCTDT = this.FindByName<global::Xamarin.Forms.Button>("btnCTDT");
             btnTKB = this.FindByName<global::Xamarin.Forms.Button>("btnTKB");
             btnLichThi = this.FindByName<global::Xamarin.Forms.Button>("btnLichThi");
+            btnDiem = this.FindByName<global::Xamarin.Forms.Button>("btnDiem");
             btnHP = this.FindByName<global::Xamarin.Forms.Button>("btnHP");
+            btnThongTin = this.FindByName<global::Xamarin.Forms.Button>("btnThongTin");
         }
     }
 }

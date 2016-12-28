@@ -12,18 +12,28 @@ namespace Regis
 {
     public partial class ChuongTrinhDaoTao : ContentPage
     {
+        string u = null;
+        string p = null;
         public ChuongTrinhDaoTao()
         {
             InitializeComponent();
-            //lstCTDT.ItemsSource = Test();
-
+            u = (Application.Current as App).User;
+            p = (Application.Current as App).Pass;
             Test();
         }
-        static async Task<string> DownloadPage(string url)
+        async Task<string> DownloadPage(string url)
         {
+            var comment = u;
+            var questionId = p;
+
+            var formContent = new FormUrlEncodedContent(new[]
+            {
+                new KeyValuePair<string, string>("_user", comment),
+                new KeyValuePair<string, string>("_pass", questionId)
+            });
             using (var client = new HttpClient())
             {
-                using (var r = await client.GetAsync(new Uri(url)))
+                using (var r = await client.PostAsync(new Uri(url), formContent))
                 {
                     string result = await r.Content.ReadAsStringAsync();
                     return result;
@@ -32,7 +42,7 @@ namespace Regis
         }
         async void Test()
         {
-            var r = await DownloadPage("http://192.168.1.5:8080//chuongtrinhdaotao.php");
+            var r = await DownloadPage("http://192.168.1.2:8080//chuongtrinhdaotao.php");
             var t = JsonConvert.DeserializeObject<List<ChuongTrinhDaoTao_DTO>>(r);
             List<String> MMH = new List<String>();
             List<String> TMH = new List<String>();
