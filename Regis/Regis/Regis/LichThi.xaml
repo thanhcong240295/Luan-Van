@@ -2,18 +2,22 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Regis.LichThi">
-    <ListView x:Name="lstTKB" HasUnevenRows="True">
-        <ListView.ItemTemplate>
-            <DataTemplate>
-                <ViewCell>
-                    <StackLayout Padding="10" HorizontalOptions="Center">
-                        <Label Text="{Binding Ngay}" XAlign="Center" HorizontalOptions="Start" FontSize="20" FontAttributes="Bold" TextColor="Blue"/>
-                        <Label Text="{Binding ThoiGian}" XAlign="Center" HorizontalOptions="Center" FontSize="20" FontAttributes="Bold" TextColor="Red"/>
-                        <Label Text="{Binding MaTen}" XAlign="Center" HorizontalOptions="Center" FontSize="15" FontAttributes="Bold" TextColor="#019A01"/>
-                        <Label Text="{Binding PhongH}" XAlign="Center" HorizontalOptions="Center" FontAttributes="Bold"/>
-                    </StackLayout>
-                </ViewCell>
-            </DataTemplate>
-        </ListView.ItemTemplate>
-    </ListView>
+    <StackLayout>
+        <Label XAlign="Center" x:Name="txtLoading" Text="Loading ..." TextColor="Blue"></Label>
+        <ListView x:Name="lstTKB" HasUnevenRows="True">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Padding="10">
+                            <Label Text="{Binding Ngay}" XAlign="Start" HorizontalOptions="Start" FontSize="20" FontAttributes="Bold" TextColor="Blue"/>
+                            <Label Text="{Binding ThoiGian}" XAlign="Center" HorizontalOptions="Center" FontSize="20" FontAttributes="Bold" TextColor="Red"/>
+                            <Label Text="{Binding MaTen}" XAlign="Center" HorizontalOptions="Center" FontSize="15" FontAttributes="Bold" TextColor="#019A01"/>
+                            <Label Text="{Binding PhongH}" XAlign="Center" HorizontalOptions="Center" FontAttributes="Bold"/>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+
 </ContentPage>

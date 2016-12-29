@@ -2,4 +2,28 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Regis.TaiKhoan">
+    <StackLayout>
+        <StackLayout>
+            <Image x:Name="imgAvatar" WidthRequest="120" Source="agulogo.png"></Image>
+            <Label x:Name="txtLoading" XAlign="Center" TextColor="Blue" Text="Loading ..."></Label>
+        </StackLayout>
+        <StackLayout>
+            <ScrollView>
+                <ListView x:Name="lstTKB" HasUnevenRows="True">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <StackLayout Padding="10">
+                                    <Label Text="{Binding TN}" XAlign="Start" FontSize="17" FontAttributes="Bold" TextColor="Black"/>
+                                    <Label Text="{Binding NT}" XAlign="End" FontSize="17" FontAttributes="Bold" TextColor="#019A01"/>
+                                </StackLayout>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </ScrollView>
+        </StackLayout>
+        
+    </StackLayout>
+    
 </ContentPage>

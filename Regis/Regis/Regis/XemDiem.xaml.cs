@@ -74,6 +74,7 @@ namespace Regis
                     lstTKB.ItemsSource = xd;
                 }
             }
+            txtloading.Text = "";
         }
         async Task<string> DownloadPage(string url)
         {

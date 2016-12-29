@@ -52,12 +52,12 @@
                 <Label Text="Đánh Giá" XAlign="Center" FontAttributes="Bold" TextColor="#019A01"></Label>
             </StackLayout>
             <StackLayout VerticalOptions="Center" HorizontalOptions="Center" Grid.Column="2" Grid.Row="2">
-                <Button Image ="ykien.png" BackgroundColor="White"></Button>
+                <Button Image ="ykien.png" BackgroundColor="White" x:Name="btnGopY"></Button>
                 <Label Text="Ý Kiến" XAlign="Center" FontAttributes="Bold" TextColor="#019A01"></Label>
             </StackLayout>
 
             <StackLayout VerticalOptions="Center" HorizontalOptions="Center" Grid.Column="0" Grid.Row="3">
-                <Button Image ="user.png" BackgroundColor="White"></Button>
+                <Button Image ="user.png" BackgroundColor="White" x:Name="btnTaiKhoan"></Button>
                 <Label Text="Tài Khoản" XAlign="Center" FontAttributes="Bold" TextColor="#019A01"></Label>
             </StackLayout>
             <StackLayout VerticalOptions="Center" HorizontalOptions="Center" Grid.Column="1" Grid.Row="3">

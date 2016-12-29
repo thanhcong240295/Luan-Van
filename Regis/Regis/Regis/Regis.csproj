@@ -44,6 +44,9 @@
       <DependentUpon>ChuongTrinhDaoTao.xaml</DependentUpon>
     </Compile>
     <Compile Include="ChuongTrinhDaoTao_DTO.cs" />
+    <Compile Include="GopY.xaml.cs">
+      <DependentUpon>GopY.xaml</DependentUpon>
+    </Compile>
     <Compile Include="HocPhi.xaml.cs">
       <DependentUpon>HocPhi.xaml</DependentUpon>
     </Compile>
@@ -67,6 +70,7 @@
     <Compile Include="TaiKhoan.xaml.cs">
       <DependentUpon>TaiKhoan.xaml</DependentUpon>
     </Compile>
+    <Compile Include="TaiKhoan_DTO.cs" />
     <Compile Include="ThoiKhoaBieu.xaml.cs">
       <DependentUpon>ThoiKhoaBieu.xaml</DependentUpon>
     </Compile>
@@ -172,6 +176,12 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="TaiKhoan.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="GopY.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>

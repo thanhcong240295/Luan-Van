@@ -17,11 +17,15 @@ namespace Regis {
     public partial class XemDiem : global::Xamarin.Forms.ContentPage {
         
         [System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
+        private global::Xamarin.Forms.Label txtloading;
+        
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
         private global::Xamarin.Forms.ListView lstTKB;
         
         [System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
         private void InitializeComponent() {
             this.LoadFromXaml(typeof(XemDiem));
+            txtloading = this.FindByName<global::Xamarin.Forms.Label>("txtloading");
             lstTKB = this.FindByName<global::Xamarin.Forms.ListView>("lstTKB");
         }
     }

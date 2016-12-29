@@ -102,6 +102,7 @@ namespace Regis
                 });
                 lstTKB.ItemsSource = s;
             }
+            txtLoang.Text = "";
         }
         async Task<string> DownloadPage(string url)
         {

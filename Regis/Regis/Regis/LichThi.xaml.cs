@@ -150,6 +150,7 @@ namespace Regis
                 });
                 lstTKB.ItemsSource = s;
             }
+            txtLoading.Text = "";
         }
         async Task<string> DownloadPage(string url)
         {

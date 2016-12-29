@@ -17,6 +17,9 @@ namespace Regis {
     public partial class HocPhi : global::Xamarin.Forms.ContentPage {
         
         [System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
+        private global::Xamarin.Forms.Label txtLoang;
+        
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
         private global::Xamarin.Forms.Label txtTongChi;
         
         [System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
@@ -28,6 +31,7 @@ namespace Regis {
         [System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
         private void InitializeComponent() {
             this.LoadFromXaml(typeof(HocPhi));
+            txtLoang = this.FindByName<global::Xamarin.Forms.Label>("txtLoang");
             txtTongChi = this.FindByName<global::Xamarin.Forms.Label>("txtTongChi");
             txtTongTien = this.FindByName<global::Xamarin.Forms.Label>("txtTongTien");
             lstTKB = this.FindByName<global::Xamarin.Forms.ListView>("lstTKB");

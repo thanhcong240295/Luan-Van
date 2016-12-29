@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Regis.GopY">
+    <StackLayout Margin="15">
+        <Label Text="Chủ Đề:" TextColor="#019A01" FontAttributes="Bold"></Label>
+        <Entry x:Name="txtChuDe" Placeholder="Đăng Ký Học Phần" Margin="10"></Entry>
+        <Label Text="Nội Dung:" TextColor="#019A01" FontAttributes="Bold"></Label>
+        <Entry x:Name="txtNoiDung" Placeholder="Nội dung ..." Margin="10"></Entry>
+        <Label XAlign="Center" x:Name="txtThongBao" FontAttributes="Bold" TextColor="Red"></Label>
+        <Grid x:Name="grid">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50"/>
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Button x:Name="btnGui" Text="Gửi" Grid.Column="0" Grid.Row="0" TextColor="#B6192B"></Button>
+            <Button x:Name="btnLamMoi" Text="Làm Mới" Grid.Column="1" Grid.Row="0" TextColor="#B6192B"></Button>
+        </Grid>
+            
+    </StackLayout>
+</ContentPage>

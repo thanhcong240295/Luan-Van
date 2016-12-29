@@ -44,6 +44,14 @@ namespace Regis
             {
                 Navigation.PushAsync(new About());
             };
+            btnTaiKhoan.Clicked += (sender, e) =>
+            {
+                Navigation.PushAsync(new TaiKhoan());
+            };
+            btnGopY.Clicked += (sender, e) =>
+            {
+                Navigation.PushAsync(new GopY());
+            };
         }
     }
 }

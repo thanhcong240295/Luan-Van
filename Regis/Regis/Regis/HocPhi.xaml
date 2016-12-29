@@ -4,6 +4,7 @@
              x:Class="Regis.HocPhi">
     <ScrollView>
         <StackLayout Padding="10">
+            <Label x:Name="txtLoang" Text="Loangding ..." TextColor="Blue"></Label>
             <Label x:Name="txtTongChi" HorizontalOptions="Start" FontAttributes="Bold" FontSize="25"></Label>
             <Label x:Name="txtTongTien" HorizontalOptions="Start" FontAttributes="Bold" FontSize="25"></Label>
             <ListView x:Name="lstTKB" HasUnevenRows="True">

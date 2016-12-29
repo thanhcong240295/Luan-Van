@@ -39,6 +39,7 @@ namespace Regis
                     return result;
                 }
             }
+            txtloading.Text = "";
         }
         async void Test()
         {

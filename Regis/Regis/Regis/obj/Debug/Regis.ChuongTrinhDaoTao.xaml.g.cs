@@ -17,11 +17,15 @@ namespace Regis {
     public partial class ChuongTrinhDaoTao : global::Xamarin.Forms.ContentPage {
         
         [System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
+        private global::Xamarin.Forms.Label txtloading;
+        
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
         private global::Xamarin.Forms.ListView lstCTDT;
         
         [System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
         private void InitializeComponent() {
             this.LoadFromXaml(typeof(ChuongTrinhDaoTao));
+            txtloading = this.FindByName<global::Xamarin.Forms.Label>("txtloading");
             lstCTDT = this.FindByName<global::Xamarin.Forms.ListView>("lstCTDT");
         }
     }
