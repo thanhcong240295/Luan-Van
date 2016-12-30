@@ -26,12 +26,12 @@ namespace Regis
             lstTKB.ItemsSource = a;
             a.Add(new About_DTO()
             {
-                ThongTin = "Website: agu.edu.vn"
+                ThongTin = "Website: http://www.agu.edu.vn/"
             });
             lstTKB.ItemsSource = a;
             a.Add(new About_DTO()
             {
-                ThongTin = "Email: thanhcong240295@gmmail.com"
+                ThongTin = "Email: thanhcong240295@gmail.com"
             });
             lstTKB.ItemsSource = a;
             a.Add(new About_DTO()

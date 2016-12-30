@@ -43,7 +43,7 @@ namespace Regis
         }
         async void Test()
         {
-            var r = await DownloadPage("http://192.168.1.2:8080//chuongtrinhdaotao.php");
+            var r = await DownloadPage("http://192.168.1.2:8080/chuongtrinhdaotao.php");
             var t = JsonConvert.DeserializeObject<List<ChuongTrinhDaoTao_DTO>>(r);
             List<String> MMH = new List<String>();
             List<String> TMH = new List<String>();
@@ -57,13 +57,13 @@ namespace Regis
                 STC.Add(dt.SoTinChi);
                 NDH.Add(dt.NamHoc);
                 DDH.Add(dt.DaHoc);
-
-                for(int i = 0; i < MMH.Count; i++)
+                List<ChuongTrinhDaoTao_DTO> ctdt = new List<ChuongTrinhDaoTao_DTO>();
+                for (int i = 0; i < MMH.Count; i++)
                 {
-                    List<ChuongTrinhDaoTao_DTO> ctdt = new List<ChuongTrinhDaoTao_DTO>();
                     ctdt.Add(new ChuongTrinhDaoTao_DTO() { MaMonHoc = MMH[i].Replace("\r\n ", ""), TenMonHoc = TMH[i].Replace("\r\n " , ""), SoTinChi = STC[i].Replace("\r\n ", ""), NamHoc = NDH[i].Replace("\r\n ", ""), DaHoc = DDH[i].Replace("\r\n ", "") });
-                    lstCTDT.ItemsSource = ctdt;
+                    
                 }
+                lstCTDT.ItemsSource = ctdt;
             }
         }
     }

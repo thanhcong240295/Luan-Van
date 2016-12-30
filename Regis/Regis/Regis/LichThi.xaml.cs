@@ -39,7 +39,7 @@ namespace Regis
             List<String> TG = new List<String>();
             List<String> P = new List<String>();
 
-            var r = await DownloadPage("http://192.168.1.2:8080//lichthi.php");
+            var r = await DownloadPage("http://192.168.1.2:8080/lichthi.php");
             var t = JsonConvert.DeserializeObject<List<LichThi_DTO>>(r);
             foreach (LichThi_DTO lt in t)
             {
@@ -138,9 +138,8 @@ namespace Regis
                         ThoiGian = TG[i].ToString(),
                         PhongH = P[i].ToString()
                     });
-                    lstTKB.ItemsSource = s;
                 }
-                
+                lstTKB.ItemsSource = s;
             }
             else
             {

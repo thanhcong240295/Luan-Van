@@ -26,15 +26,15 @@ namespace Regis
         }
         async void Test()
         {
-            var r = await DownloadPage("http://192.168.1.2:8080//dangnhap.php");
+            var r = await DownloadPage("http://192.168.1.2:8080/dangnhap.php");
             string s = r.Replace("\t", string.Empty);
             if (s != "")
             {
-                Navigation.PushAsync(new Home());
+                await Navigation.PushAsync(new Home());
             }
             else
             {
-                DisplayAlert("Thông Báo", "MSSV hoặc Mật Khẩu Không Đúng", "OK");
+                await DisplayAlert("Thông Báo", "MSSV hoặc Mật Khẩu Không Đúng", "OK");
             }
         }
         async Task<string> DownloadPage(string url)

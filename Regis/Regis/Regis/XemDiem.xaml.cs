@@ -35,7 +35,7 @@ namespace Regis
             List<String> MT = new List<String>();
             List<String> D = new List<String>();
 
-            var r = await DownloadPage("http://192.168.1.2:8080//xemdiem.php");
+            var r = await DownloadPage("http://192.168.1.2:8080/xemdiem.php");
             var t = JsonConvert.DeserializeObject<List<XemDiem_DTO>>(r);
 
             foreach(XemDiem_DTO d in t)
@@ -71,8 +71,8 @@ namespace Regis
                         MaTen = MT[i].ToString(),
                         Diem = D[i].ToString()
                     });
-                    lstTKB.ItemsSource = xd;
                 }
+                lstTKB.ItemsSource = xd;
             }
             txtloading.Text = "";
         }

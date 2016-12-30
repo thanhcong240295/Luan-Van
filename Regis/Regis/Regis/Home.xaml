@@ -18,54 +18,54 @@
             </Grid.ColumnDefinitions>
 
             <StackLayout VerticalOptions="Center" HorizontalOptions="Center" Grid.Column="0" Grid.Row="0">
-                <Button Image="news.png" x:Name="btnnews" BackgroundColor="White"></Button>
+                <Button Image="news" x:Name="btnnews" BackgroundColor="White"></Button>
                 <Label Text="Tin Mới" XAlign="Center" FontAttributes="Bold" TextColor="#019A01"></Label>
             </StackLayout>
             <StackLayout VerticalOptions="Center" HorizontalOptions="Center" Grid.Column="1" Grid.Row="0">
-                <Button Image ="training.png" BackgroundColor="White" x:Name="btnCTDT"></Button>
+                <Button Image ="training" BackgroundColor="White" x:Name="btnCTDT"></Button>
                 <Label Text="Đào Tạo" XAlign="Center" FontAttributes="Bold" TextColor="#019A01"></Label>
             </StackLayout>
             <StackLayout VerticalOptions="Center" HorizontalOptions="Center" Grid.Column="2" Grid.Row="0">
-                <Button Image ="regis.png" BackgroundColor="White"></Button>
+                <Button Image ="regis" BackgroundColor="White"></Button>
                 <Label Text="Đăng Ký" XAlign="Center" FontAttributes="Bold" TextColor="#019A01"></Label>
             </StackLayout>
 
             <StackLayout VerticalOptions="Center" HorizontalOptions="Center" Grid.Column="0" Grid.Row="1">
-                <Button Image="thi.png" x:Name="btnTKB" BackgroundColor="White"></Button>
+                <Button Image="thi" x:Name="btnTKB" BackgroundColor="White"></Button>
                 <Label Text="Lịch Học" XAlign="Center" FontAttributes="Bold" TextColor="#019A01"></Label>
             </StackLayout>
             <StackLayout VerticalOptions="Center" HorizontalOptions="Center" Grid.Column="1" Grid.Row="1">
-                <Button Image ="tkb.png" BackgroundColor="White" x:Name="btnLichThi"></Button>
+                <Button Image ="tkb" BackgroundColor="White" x:Name="btnLichThi"></Button>
                 <Label Text="Lịch Thi" XAlign="Center" FontAttributes="Bold" TextColor="#019A01"></Label>
             </StackLayout>
             <StackLayout VerticalOptions="Center" HorizontalOptions="Center" Grid.Column="2" Grid.Row="1">
-                <Button x:Name="btnDiem" Image ="result.png" BackgroundColor="White"></Button>
+                <Button x:Name="btnDiem" Image ="result" BackgroundColor="White"></Button>
                 <Label Text="Xem Điểm" XAlign="Center" FontAttributes="Bold" TextColor="#019A01"></Label>
             </StackLayout>
 
             <StackLayout VerticalOptions="Center" HorizontalOptions="Center" Grid.Column="0" Grid.Row="2">
-                <Button Image ="money.png" BackgroundColor="White" x:Name="btnHP"></Button>
+                <Button Image ="money" BackgroundColor="White" x:Name="btnHP"></Button>
                 <Label Text="Học Phí" XAlign="Center" FontAttributes="Bold" TextColor="#019A01"></Label>
             </StackLayout>
             <StackLayout VerticalOptions="Center" HorizontalOptions="Center" Grid.Column="1" Grid.Row="2">
-                <Button Image ="danhgia.png" BackgroundColor="White"></Button>
+                <Button Image ="danhgia" BackgroundColor="White"></Button>
                 <Label Text="Đánh Giá" XAlign="Center" FontAttributes="Bold" TextColor="#019A01"></Label>
             </StackLayout>
             <StackLayout VerticalOptions="Center" HorizontalOptions="Center" Grid.Column="2" Grid.Row="2">
-                <Button Image ="ykien.png" BackgroundColor="White" x:Name="btnGopY"></Button>
+                <Button Image ="ykien" BackgroundColor="White" x:Name="btnGopY"></Button>
                 <Label Text="Ý Kiến" XAlign="Center" FontAttributes="Bold" TextColor="#019A01"></Label>
             </StackLayout>
 
             <StackLayout VerticalOptions="Center" HorizontalOptions="Center" Grid.Column="0" Grid.Row="3">
-                <Button Image ="user.png" BackgroundColor="White" x:Name="btnTaiKhoan"></Button>
+                <Button Image ="user" BackgroundColor="White" x:Name="btnTaiKhoan"></Button>
                 <Label Text="Tài Khoản" XAlign="Center" FontAttributes="Bold" TextColor="#019A01"></Label>
             </StackLayout>
             <StackLayout VerticalOptions="Center" HorizontalOptions="Center" Grid.Column="1" Grid.Row="3">
-                <Button Image ="help.png" BackgroundColor="White"></Button>
+                <Button Image ="help" BackgroundColor="White"></Button>
                 <Label Text="Trợ Giúp" XAlign="Center" FontAttributes="Bold" TextColor="#019A01"></Label>
             </StackLayout>
             <StackLayout VerticalOptions="Center" HorizontalOptions="Center" Grid.Column="2" Grid.Row="3">
-                <Button Image ="about.png" BackgroundColor="White" x:Name="btnThongTin"></Button>
+                <Button Image ="about" BackgroundColor="White" x:Name="btnThongTin"></Button>
                 <Label Text="Thông Tin" XAlign="Center" FontAttributes="Bold" TextColor="#019A01"></Label>
             </StackLayout>
         </Grid>

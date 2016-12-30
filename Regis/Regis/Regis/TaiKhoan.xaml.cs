@@ -23,7 +23,7 @@ namespace Regis
         }
         async void Test()
         {
-            var r = await DownloadPage("http://192.168.1.2:8080//taikhoan.php");
+            var r = await DownloadPage("http://192.168.1.2:8080/taikhoan.php");
             var t = JsonConvert.DeserializeObject<List<TaiKhoan_DTO>>(r);
             List<String> TC = new List<String>();
             List<String> CT = new List<String>();
@@ -43,8 +43,8 @@ namespace Regis
                         TN = TC[i].ToUpper(),
                         NT = CT[i].ToString()
                     });
-                    lstTKB.ItemsSource = s;
                 }
+                lstTKB.ItemsSource = s;
             }
             txtLoading.Text = "";
         }

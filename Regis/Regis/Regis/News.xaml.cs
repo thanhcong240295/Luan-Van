@@ -34,7 +34,7 @@ namespace Regis
         }
         async void Test()
         {
-            var r = await DownloadPage("http://192.168.1.2:8080//thongbao.php");
+            var r = await DownloadPage("http://192.168.1.2:8080/thongbao.php");
             var t = JsonConvert.DeserializeObject<List<News_DTO>>(r);
             List<String> TD = new List<String>();
             List<String> ND = new List<String>();

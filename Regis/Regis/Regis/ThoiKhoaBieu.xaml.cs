@@ -325,7 +325,7 @@ namespace Regis
             List<String> TG = new List<String>();
             List<String> P = new List<String>();
 
-            var r = await DownloadPage("http://192.168.1.2:8080//action.php");
+            var r = await DownloadPage("http://192.168.1.2:8080/action.php");
             var t = JsonConvert.DeserializeObject<List<ThoiKhoaBieu_DTO>>(r);
             foreach (ThoiKhoaBieu_DTO tkb in t)
             {
@@ -472,8 +472,8 @@ namespace Regis
                             MaTen = txtMaTen[i].Text,
                             PhongH = txtPhong[i].Text
                         });
-                        lstTKB.ItemsSource = s;
                     }
+                    lstTKB.ItemsSource = s;
                 }
                 else if (MMH.Count == 0)
                 {

@@ -36,7 +36,7 @@ namespace Regis
         }
         async void Test()
         {
-            var r = await DownloadPage("http://192.168.1.2:8080//gopy.php");
+            var r = await DownloadPage("http://192.168.1.2:8080/gopy.php");
             string s = r.Replace("\t", string.Empty);
             txtThongBao.Text = "Đã Gửi Xong";
             txtChuDe.IsEnabled = true;

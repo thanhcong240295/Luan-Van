@@ -24,7 +24,7 @@ namespace Regis
         }
         async void Test()
         {
-            var r = await DownloadPage("http://192.168.1.2:8080//hocphi.php");
+            var r = await DownloadPage("http://192.168.1.2:8080/hocphi.php");
             var t = JsonConvert.DeserializeObject<List<HocPhi_DTO>>(r);
 
             List<String> MMH = new List<String>();
@@ -89,8 +89,9 @@ namespace Regis
                         MaTen = MT[i].ToString(),
                         Tien = ST[i].ToString(),
                     });
-                    lstTKB.ItemsSource = s;
+                    
                 }
+                lstTKB.ItemsSource = s;
                 //txtTongChi.Text = "Tổng Số Tín Chỉ: " + c.ToString();
                 //txtTongTien.Text = "Tổng Số Tiền HP: " + k;
             }
